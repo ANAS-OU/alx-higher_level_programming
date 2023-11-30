@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 def pow(a, b):
-    rst = 1
     if b > 0:
-        for i in range(b):
-            rst *= a
-    elif b < 0:
-        for i in range(abs(b)):
-            rst /= a
+        rst = a ** b
+    elif b == 0:
+        rst = 1
+    else:
+        rst = 1 / (a ** abs(b))
     return (rst)
