@@ -6,5 +6,5 @@ def pow(a, b):
             rst *= a
     elif b < 0:
         for i in range(abs(b)):
-            rst *= 1 / a
+            rst /= a
     return (rst)
