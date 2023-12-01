@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import add_0
+if __name__ == "__main__":
+    import add_0 as my_module
 
 a = 1
 b = 2
-
-rst = add_0.add(a, b)
+rst = my_module.add(a, b)
 print("{} + {} = {}".format(a, b, rst))
