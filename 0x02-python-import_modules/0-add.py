@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from add_0 import add
+import add_0 as my_module
 a = 1
 b = 2
-rst = add(a, b)
-print("{:d} + {:d} = {:d}".format(a, b, rst))
+rst = my_module.add(a, b)
+print("{} + {} = {}".format(a, b, rst))
