@@ -2,5 +2,4 @@
 def search_replace(my_list, search, replace):
     if not my_list:
         return
-    new_list = list(map(lambda x: replace if x == search else x, my_list))
-    return (new_list)
+    return (list(map(lambda x: replace if x == search else x, my_list)))
