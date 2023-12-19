@@ -1,7 +1,16 @@
 #!/usr/bin/python3
+
+"""
+Writing an empty class Square
+that defines a square
+
+"""
+
+
 class Square:
     """
-    Writing an empty class Square
-    that defines a square
+    pass is a special statement
+    in Python that does nothing
+
     """
     pass
