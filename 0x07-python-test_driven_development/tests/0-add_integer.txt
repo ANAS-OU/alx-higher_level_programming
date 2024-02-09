@@ -1,0 +1,66 @@
+================================
+doctest my ``calculator`` module
+================================
+
+This is just a simple module that only has
+one simple function ``add_integer()``.
+
+Importing my ``add_integer`` function
+
+::
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Numbers
+=======
+``add_integer`` returns the addition of its two given arguments. For numbers,
+that value is equivalent to using the ``+`` operator.
+
+::
+    >>> add_integer(4, 3)
+    7
+
+It also working with floating-point values.
+
+::
+    >>> add_integer(4.00, 3)
+    7
+    >>> add_integer(4, 3.00)
+    7
+    >>> add_integer(-2)
+    96
+
+One argument
+============
+
+Only one argument is required
+
+::
+    >>> add_integer(2)
+    100
+
+No-Numbers
+==========
+
+Given the first argument as a string
+
+::
+    >>> add_integer("alx")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Given the second argument as a string
+
+::
+    >>> add_integer(4, "hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+The two arguments given as strings
+
+::
+    >>> add_integer("alx", "school")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
