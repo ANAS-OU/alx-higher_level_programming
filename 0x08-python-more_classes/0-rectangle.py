@@ -1,10 +1,6 @@
 #!/usr/bin/python3
-""" 
-Rectangle Module
-
-This is just a simple module
-"""
+""" My Simple Module """
 
 class Rectangle:
-    """ Our Rectangle class """
+    """ Define a rectangle class """
     pass # Empty class
