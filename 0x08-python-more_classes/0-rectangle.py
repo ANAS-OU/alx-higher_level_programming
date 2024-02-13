@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-""" My Simple Module """
+"""
+My Module
+
+This is a simple module
+"""
+
 
 class Rectangle:
     """ Define a rectangle class """
