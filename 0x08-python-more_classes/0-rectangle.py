@@ -4,4 +4,5 @@ Rectangle Module
 """
 
 class Rectangle:
+    """ Our Rectangle class """
     pass # Empty class
