@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-"Rectangle" Module
+Rectangle Module
 
 This is just a simple module that provides a rectangle class
 with width and height attributes.
@@ -9,20 +9,17 @@ with width and height attributes.
 
 class Rectangle:
     """Defines a rectange
-    """
+    """    
     def __init__(self, width=0, height=0):
-        """ Initialazing a rectangle """
         self.width = width
         self.height = height
 
     @property    
     def width(self):
-        """ width getter """
         return self.__width
     
     @width.setter
     def width(self, value):
-        """ width setter """
         if type(value) != int:
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -31,12 +28,10 @@ class Rectangle:
     
     @property
     def height(self):
-        """ height getter """
         return self.__height
     
     @height.setter
     def height(self, value):
-        """ height setter """
         if type(value) != int:
             raise TypeError("height must be an integer")
         elif value < 0:
