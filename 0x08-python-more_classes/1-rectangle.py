@@ -8,13 +8,11 @@ This is just a simple module
 
 class Rectangle:
     """ Defines a rectange """
-    __width = 0
-    __height = 0
 
     def __init__(self, width=0, height=0):
         """ Initialazing a rectangle """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property    
     def width(self):
