@@ -2,13 +2,14 @@
 """
 "Rectangle" Module
 
-This is just a simple module
+This is just a simple module that provides a rectangle class
+with width and height attributes.
 """
 
 
 class Rectangle:
-    """ Defines a rectange """
-
+    """Defines a rectange
+    """
     def __init__(self, width=0, height=0):
         """ Initialazing a rectangle """
         self.width = width
