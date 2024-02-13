@@ -14,6 +14,7 @@ class Rectangle:
     """Defines a rectange"""    
 
     def __init__(self, width=0, height=0):
+        """Initializes a Rectangle object with the given width and height."""
         self.width = width
         self.height = height
 
