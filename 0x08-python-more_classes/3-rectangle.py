@@ -35,7 +35,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """Setter Method for height""" 
+        """Setter Method for height"""
         if not isinstance(value, int):
             raise TypeError('height must be an integer')
         elif value < 0:
@@ -56,8 +56,8 @@ class Rectangle:
         """Rectangle String"""
         str = ""
         if self.__width and self.__height:
-            for l in range(self.__height):
+            for row in range(self.__height):
                 str += "#" * self.__width
-                if l != self.__height-1:
-                    str += "\n" 
+                if row != self.__height-1:
+                    str += "\n"
         return str
