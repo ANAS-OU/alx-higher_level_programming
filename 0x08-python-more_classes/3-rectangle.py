@@ -53,9 +53,11 @@ class Rectangle:
         return (self.__width + self.__height) * 2
 
     def __str__(self):
-        """Method String Object"""
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        for row in range(self.__height - 1):
-            print("#" * self.__width)
-        return ('#' * self.__width)
+        """Rectangle String"""
+        str = ""
+        if self.__width and self.__height:
+            for l in range(self.__height):
+                str += "#" * self.__width
+                if l != self.__height-1:
+                    str += "\n" 
+        return str
