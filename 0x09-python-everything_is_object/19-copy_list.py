@@ -4,6 +4,6 @@ Simple Module
 """
 
 
-def copy_list(List):
+def copy_list(l):
     """Returns copy of a given list"""
-    return List.copy()
+    return l.copy()
