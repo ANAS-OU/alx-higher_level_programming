@@ -2,8 +2,8 @@
 """
 Inheritance Module
 
-The purpose of that module is to play around,
-and practice the Inheritance Principle in Python.
+The purpose of that module is to play around, and
+practice the Inheritance Principle in Python.
 """
 
 
