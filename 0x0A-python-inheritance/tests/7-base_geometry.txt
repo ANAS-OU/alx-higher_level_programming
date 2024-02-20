@@ -1,0 +1,69 @@
+================================
+doctest my ``Inheritance`` module
+================================
+
+This is a module that helps to practice
+the principle of Inheritance, here we'll
+doctest our class ``BaseGeometry``.
+
+Importing ``BaseGeometry`` class
+
+::
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+Integers
+========
+::
+	>>> my_shape = BaseGeometry()
+	>>> my_shape.integer_validator("width", 10)
+	>>> my_shape.integer_validator("height", 30)
+
+
+No-Integers
+===========
+
+Trying the class validator with no-integer values
+
+::
+	>>> my_shape.integer_validator("width", True)
+	Traceback (most recent call last):
+	...
+	TypeError: width must be an integer
+
+::
+	>>> my_shape.integer_validator("height", "height")	
+	Traceback (most recent call last):
+	...
+	TypeError: height must be an integer
+
+
+Area Method
+=============
+
+The area method is not implemented
+
+::
+	>>> my_shape.area()
+	Traceback (most recent call last):
+	...
+	Exception: area() is not implemented
+
+::
+
+Value Validator
+===============
+
+The value must be greater than 0
+
+::
+	>>> my_shape.integer_validator("width", -10)	
+	Traceback (most recent call last):
+	...
+	ValueError: width must be greater than 0
+
+::
+	>>> my_shape.integer_validator("width", 0)	
+	Traceback (most recent call last):
+	...
+	ValueError: width must be greater than 0
