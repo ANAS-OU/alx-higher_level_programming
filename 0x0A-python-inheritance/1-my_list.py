@@ -13,14 +13,16 @@ class MyList(list):
         """Initialize the list"""
         for element in elements:
             if type(element) is not int:
-                raise TypeError("The list of type int, all its elements must be integers.")
+                m = "The list of type int, all its elements must be integers."
+                raise TypeError(m)
 
         super().__init__([*elements])
 
     def append(self, element):
         """Add a new element at the end"""
         if type(element) is not int:
-            raise TypeError("The list of type int, new elements must be integers.")
+            m = "The list of type int, new elements must be integers."
+            raise TypeError(m)
         super().append(element)
 
     def print_sorted(self):
