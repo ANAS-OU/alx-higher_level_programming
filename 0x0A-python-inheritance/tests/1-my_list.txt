@@ -1,0 +1,57 @@
+================================
+doctest my ``Inheritance`` module
+================================
+
+This is a module that helps to practice
+the principle of Inheritance, here we'll
+doctest our customized list ``MyList``.
+
+Importing ``MyList`` class.
+
+::
+    >>> MyList = __import__('1-my_list').MyList
+
+List of Integers
+================
+``MyList`` a customized list class, list of type int.
+That means the elements in the that list are integers.
+
+::
+    >>> my_list = MyList(1, 2, 3)
+	>>> my_list.print_sorted()
+	[1, 2, 3]
+	>>> my_list.append(4)
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4]
+
+
+Mixed List
+==========
+
+Trying to initialize the list with deffrent data types
+
+::
+	>>> my_list = MyList("alx", 24, "school")
+	Traceback (most recent call last):
+	...
+	TypeError: The list of type int, all its elements must be integers.
+
+Append Method
+=============
+
+The append method of our list should
+only add integers to the list.
+
+::
+	>>> my_list = MyList(1, 2, 3)
+	>>> my_list.append(4)
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4]
+
+Trying to add a string to our list
+
+::
+	>>> my_list.append("alx")
+	Traceback (most recent call last):
+	...
+	TypeError: The list of type int, new elements must be integers.
