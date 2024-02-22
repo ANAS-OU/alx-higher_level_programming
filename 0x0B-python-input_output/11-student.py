@@ -32,4 +32,5 @@ class Student:
 
     def reload_from_json(self, json):
         """Method to rebuild this instance"""
-        self.__dict__ = json
+        if json:
+            self.__dict__ = json
