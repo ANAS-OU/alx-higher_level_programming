@@ -19,7 +19,7 @@ class Student:
     def to_json(self, attrs=None):
         """returns JSON representation
         of an instance of this class"""
-        if not attrs:
+        if attrs is None:
             return self.__dict__
 
         myJson = {}
