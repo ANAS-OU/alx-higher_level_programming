@@ -36,6 +36,11 @@ class Rectangle(Base):
         """Returns the rectangle area"""
         return self.__width * self.__height
 
+    def display(self):
+        """Display on the stdout the rectangle"""
+        for row in range(self.__height):
+            print("#" * self.__width)
+
     @property
     def width(self):
         return self.__width
