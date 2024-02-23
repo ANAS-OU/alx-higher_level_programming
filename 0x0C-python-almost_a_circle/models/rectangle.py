@@ -38,8 +38,10 @@ class Rectangle(Base):
 
     def display(self):
         """Display on the stdout the rectangle"""
+        for y in range(self.__y):
+            print("")
         for row in range(self.__height):
-            print("#" * self.__width)
+            print((" " * self.__x) + ("#" * self.__width))
 
     def __str__(self):
         """String representation of an instance"""
