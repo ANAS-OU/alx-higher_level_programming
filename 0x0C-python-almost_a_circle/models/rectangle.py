@@ -11,8 +11,21 @@ from models.base import Base
 class Rectangle(Base):
     """Rectangle Class"""
 
+    def integer_validator(self, name, value):
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(name))
+        if value <= 0 and name in ["width", "height"]:
+            raise ValueError("{} must be > 0".format(name))
+        if value < 0 and name in ["x", "y"]:
+            raise ValueError("{} must be >= 0".format(name))
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialization with the class constructor"""
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+        self.integer_validator("x", x)
+        self.integer_validator("y", y)
+
         super().__init__(id)
         self.__width = width
         self.__height = height
@@ -25,6 +38,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, width):
+        self.integer_validator("width", width)
         self.__width = width
 
     @property
@@ -33,6 +47,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
+        self.integer_validator("height", height)
         self.__height = height
 
     @property
@@ -41,6 +56,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, x):
+        self.integer_validator("x", x)
         self.__x = x
 
     @property
@@ -49,4 +65,5 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, y):
+        self.integer_validator("y", y)
         self.__y = y
