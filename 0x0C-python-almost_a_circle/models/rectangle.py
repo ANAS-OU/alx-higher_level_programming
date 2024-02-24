@@ -43,6 +43,15 @@ class Rectangle(Base):
         for row in range(self.__height):
             print((" " * self.__x) + ("#" * self.__width))
 
+    def update(self, *args):
+        """Method for updating an instance"""
+        keys = list(self.__dict__.keys())
+        idx = 0
+        for arg in args:
+            key = keys[idx]
+            self.__dict__[key] = arg
+            idx += 1
+
     def __str__(self):
         """String representation of an instance"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
