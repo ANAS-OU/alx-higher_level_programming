@@ -45,7 +45,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """Method for updating an instance"""
-        if len(args) > 0:
+        if args is not None and len(args) > 0:
             keys = list(self.__dict__.keys())
             idx = 0
             for arg in args:
