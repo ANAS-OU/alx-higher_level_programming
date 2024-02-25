@@ -56,6 +56,11 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
+    def to_dictionary(self):
+        """Returns a representation dictionary"""
+        return {"id": self.id, "width": self.__width, "height": self.height,
+                "x": self.__x, "y": self.__y}
+
     def __str__(self):
         """String representation of an instance"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
