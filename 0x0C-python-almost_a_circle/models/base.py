@@ -43,3 +43,10 @@ class Base:
                 for obj in list_objs:
                     myDict.append(obj.to_dictionary())
             myFile.write(Base.to_json_string(myDict))
+
+    @classmethod
+    def create(cls, **dictionary): 
+        """Returns a new instance"""
+        newObj = cls(1, 1, 1, 1)
+        newObj.update(**dictionary)
+        return newObj
