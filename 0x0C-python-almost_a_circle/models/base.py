@@ -48,7 +48,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Returns a new instance"""
-        newObj = cls(1)
+        if cls.__name__ is "Rectangle":
+            newObj = cls(1, 1)
+        else:
+            newObj = cls(1)
         newObj.update(**dictionary)
         return newObj
 
