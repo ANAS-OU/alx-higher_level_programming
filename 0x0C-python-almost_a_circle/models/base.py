@@ -6,6 +6,7 @@ This is a simple module of the porpuse of
 being familiar with <Unittest> in python.
 """
 import json
+import os
 
 
 class Base:
@@ -42,11 +43,28 @@ class Base:
             if list_objs is not None:
                 for obj in list_objs:
                     myDict.append(obj.to_dictionary())
-            myFile.write(Base.to_json_string(myDict))
+            myFile.write(cls.to_json_string(myDict))
 
     @classmethod
-    def create(cls, **dictionary): 
+    def create(cls, **dictionary):
         """Returns a new instance"""
         newObj = cls(1, 1, 1, 1)
         newObj.update(**dictionary)
         return newObj
+
+    @classmethod
+    def load_from_file(cls):
+        """Build list of inctances from a JSON file"""
+        filename = cls.__name__ + ".json"
+        instances = []
+
+        if not os.path.exists(filename):
+            return []
+
+        with open(filename, "r", encoding="utf-8") as myFile:
+            myData = myFile.read()
+            dict_list = cls.from_json_string(myData)
+
+        for _dict in dict_list:
+            instances.append(cls.create(**_dict))
+        return instances
