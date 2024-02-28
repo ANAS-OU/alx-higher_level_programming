@@ -48,7 +48,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Returns a new instance"""
-        newObj = cls(1, 1, 1, 1)
+        newObj = cls(1)
         newObj.update(**dictionary)
         return newObj
 
